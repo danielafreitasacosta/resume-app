@@ -12,19 +12,27 @@
         </head>
         <body>
             <div class="nav">
-                
-                <div class="resume" id="resume">
-                    <h1 id="message">Ping!</h1>
-                    <button id="changeMessageButton" class="navbtn"><i class="fas fa-download">download-button</i></button>
+                    <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
                     <form>
                         <input type="hidden" id="custinfo" name="custinfo">
+                        <button class="navbtn"><i class="fas fa-save"></i></button>
                     </form>
-                   
-                    <section id="print">
-
-                    </section>
-
+                    <button class="navbtn" href=""><i class="fas fa-home"></i></button>
                 </div>
+            
+                <div class="resume" id="resume">
+                    <section id="print">
+                        <div class="head">
+                            <div class="main">
+                                <span class="name" contenteditable="true">YOUR</span>
+                                <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
+                            </div>
+                            <div class="contacts">
+
+                            </div>
+                        </div>
+                </div>
+                    </section>
             </div>
         </body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>

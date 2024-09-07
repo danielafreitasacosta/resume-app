@@ -1,5 +1,7 @@
 // EJEMPLO
 
+const { html2pdf } = require("html2pdf.js");
+
 const h1Element = document.getElementById('message');
 const button = document.getElementById('changeMessageButton');
 
@@ -10,3 +12,29 @@ const changeMessage = () => {
 }
 
 button.addEventListener('click', changeMessage); 
+
+function printpdf() {
+    var content = document.getElementById("resume"); 
+
+    const allButtons = document.querySelectorAll("#print button"); 
+    allButtons.forEach(button => {
+        button.classList.add("none"); 
+    }); 
+
+    let allInputCheckboxes = document.querySelectorAll(".input-checkbox"); 
+    allInputCheckboxes.forEach(input => {
+        input.classList.add("none");
+    })
+
+    allButtons.forEach(button => {
+        button.classList.remove("none"); 
+    })
+    allInputCheckboxes.forEach(input => {
+        input.classList.remove("none");
+    })
+
+    html2pdf(content, {
+        html2canvas: {scale: 1, logging:true, dpi: 500}
+    });
+    
+}
