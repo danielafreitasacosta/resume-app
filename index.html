@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-    <html> 
+    <div> 
         <head>
             <meta charset="utf-8"> 
             <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -11,7 +11,7 @@
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
        
         </head>
-        <body>
+        <div>
             <div class="nav">
                     <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fa-solid fa-download"></i></button>
                     <form>
@@ -62,7 +62,7 @@
                                 <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"><i class="fa-solid fa-plus-circle"></i> Achievement</button>  
                                 </button>
                                 &nbsp; 
-                                <button class="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top:0;"><i class="fa-solid fa-minus-circle"></i> Achievement</button></div>
+                                <button class="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top:0;"><i class="fa-solid fa-minus-circle"></i> Achievement</button>
 
                                 <br><br>
                                 <span class="title">INTERESTS</span><br><br> 
@@ -72,24 +72,44 @@
                                     <button id="intadd" type="button" class="btn btn-success" onclick="addInt()"><i class="fa-solid fa-plus-circle"></i>Interest</button>
                                     &nbsp;
                                     <button id="intrem" type="button" class="btn btn-danger" onclick="remInt(event)"><i class="fa-solid fa-minus-circle"></i>Interest</button></div>
-                                </div>
-
-                        </div>
 
                                     <div class="border"></div>
                                     <div class="rightside">
-                                    <span class="title">PROFILE</span>
-                                    <br><br>
-                                    <div contenteditable="true">
-                                        Write basic information about your career and the skills you want to communicate to the interviewer. 
-                                        Keep it brief. 
-                                        Remember not to repeat information in any other section of this CV. 
-                                    </div>
+                                        <span class="title">PROFILE</span>
+                                        <br><br>
+                                        <div contenteditable="true">
+                                            Write basic information about your career and the skills you want to communicate to the interviewer. 
+                                            Keep it brief. 
+                                            Remember not to repeat information in any other section of this CV. 
+                                        </div>
+                                        <br><br>
+                                        <span class="title">EDUCATION</span>
+                                        <br><br>
+                                            <div>
+                                                <div id="education">
+                                                    <div class="edublock">
+                                                        <span><input type="checkbox" class="input-checkbox"></span>
+                                                        <span class="education-head" contenteditable="true">YOUR DEGREE</span>
+                                                    </div> <span contenteditable="true">Institute Name</span> - <span contenteditable="true">Graduation Date</span>
+                                                </div>
+                                            </div>
+                                            <button id="eduadd" type="button" class="btn btn-success" onclick="addEdu()"><i class="fa-solid fa-plus-circle"></i>Education</button>
+                                            &NonBreakingSpace;
+                                            <button id="edurem" type="button" class="btn btn-danger" onclick="remEdu(event)"><i class="fa-solid fa-minus-circle"></i>Education</button>
+                                        <br><br>
+                                        <div class="new-section-div"><div><span><input type="checkbox" class="input-checkbox"></span><span class="title" contenteditable="true">NEW SECTION</span><br><br>
+                                                <div contenteditable="true">
+                                                    Add text to your new section. The maximum length of each new section is less than 400 characters. You can use spaces and symbols to indent your content. 
+                                                </div>
+                                            </div>
 
-
-
-                                    </div>
-
+                                            <div id="newsec"></div>
+                                            <button id="secadd" type="button" class="btn btn-success" onclick="addSec()"><i class="fa-solid fa-plus-circle"></i>Section</button>
+                                            &nbsp; 
+                                            <button id="secrem" type="button" class="btn btn-danger" onclick="remSec(event)"><i class="fa-solid fa-minus-circle"></i>Section</button>
+                                        </div>
+                                </div>
+                   
                     </section>
                 </div>
         </body>
