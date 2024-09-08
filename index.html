@@ -6,36 +6,94 @@
             <meta name="resume-app" content="Custom resume pdf generator"> 
             <meta name="viewport" content="width=device-width, initial-scale=1">
             <title>Resume CV Builder App</title>
+            <link rel="stylesheet" href="styles.css">
             <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.3/js/bootstrap.min.js"/>
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-            <link rel="styles"  src="styles.css">
+       
         </head>
         <body>
             <div class="nav">
-                    <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fas fa-download"></i></button>
+                    <button id="cmd" onclick="printpdf()" class="navbtn"><i class="fa-solid fa-download"></i></button>
                     <form>
                         <input type="hidden" id="custinfo" name="custinfo">
-                        <button class="navbtn"><i class="fas fa-save"></i></button>
+                        <button class="navbtn"><i class="fa-solid fa-floppy-disk"></i></button>
                     </form>
-                    <button class="navbtn" href=""><i class="fas fa-home"></i></button>
-                </div>
+                        <button class="navbtn" href=""><i class="fa-solid fa-house"></i></button>
+            </div>
             
                 <div class="resume" id="resume">
                     <section id="print">
                         <div class="head">
                             <div class="main">
-                                <span class="name" contenteditable="true">YOUR</span>
-                                <div class="post" contenteditable="true">YOUR JOB PROFILE</div>
+                                <span class="name" contenteditable="true">Your Name </span>
+                                <div class="post" contenteditable="true"> Your Job Profile</div>
                             </div>
                             <div class="contacts">
-
+                                <span contenteditable="true" class="content">+34 000 000 000</span><span class="symbol"><i class="fa-solid fa-mobile-screen-button"></i></span><br>
+                                <span contenteditable="true" class="content"> example@gmail.com </span><span class="symbol"><i class="fa-solid fa-envelope"></i></span><br>
+                                <span contenteditable="true" class="content"> linkedin/username</span><span class="symbol"><i class="fa-brands fa-linkedin"></i></span><br>
+                                <span contenteditable="true" class="content">sample street in Barcelona</span><span class="symbol"><i class="fa-solid fa-location-dot"></i></span>
                             </div>
                         </div>
-                </div>
+
+                        <div class="line"></div>
+                        <div class="mainbody">
+                            <div class="leftside">
+                                <span class="title">MY SKILLS</span><br><br><div>
+                                <div class="skill"><span><input type="checkbox" class="input-checkbox"></span><span><i class="fa-solid fa-circle-chevron-right"></i></span>&nbsp&NonBreakingSpace;<span contenteditable="true">Write your skill here</span></div>
+                                <div id="skills"></div>
+                                <button id="skilladd" type="button" class="btn btn-success" onclick="addskill()"><i class="fa-solid fa-plus-circle"></i>Skill</button>&nbsp;
+                                <button id="skillrem" type="button" class="btn btn-danger" onclick="remskill(event)"><i class="fa-solid fa-minus-circle"></i> Skill</button></div>
+
+                                <br><br>
+                                <span class="title">LANGUAGES</span>
+                                <br><br>
+                                <div class="language"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">LANGNAME</span>&nbsp&nbsp;<span contenteditable="true">Level you know</span></div>
+                                <div id="languages"></div>    
+                                <button id="langadd" type="button" class="btn btn-success" onclick="addLang()"><i class="fa-solid fa-plus-circle"></i>Language</button>
+                                &nbsp;
+                                <button id="langrem" type="button" class="btn btn-danger" onclick="remLang(event)"><i class="fa-solid fa-minus-circle"></i>Language</button></div>
+
+                                <br><br>
+                                <span class="title"> ACHIEVEMENTS </span>
+                                <br><br></div>
+                                <div class="achieve"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write your achievements</span></div>
+                                <div id="achievement"></div> 
+                                <button id="achadd" type="button" class="btn btn-success" onclick="addAch()"><i class="fa-solid fa-plus-circle"></i> Achievement</button>  
+                                </button>
+                                &nbsp; 
+                                <button class="achrem" type="button" class="btn btn-danger" onclick="remAch(event)" style="margin-top:0;"><i class="fa-solid fa-minus-circle"></i> Achievement</button></div>
+
+                                <br><br>
+                                <span class="title">INTERESTS</span><br><br> 
+                                <div>
+                                    <div class="achieve"><span><input type="checkbox" class="input-checkbox"></span><span contenteditable="true">Write interest</span></div>
+                                    <div id="interest"></div>
+                                    <button id="intadd" type="button" class="btn btn-success" onclick="addInt()"><i class="fa-solid fa-plus-circle"></i>Interest</button>
+                                    &nbsp;
+                                    <button id="intrem" type="button" class="btn btn-danger" onclick="remInt(event)"><i class="fa-solid fa-minus-circle"></i>Interest</button></div>
+                                </div>
+
+                        </div>
+
+                                    <div class="border"></div>
+                                    <div class="rightside">
+                                    <span class="title">PROFILE</span>
+                                    <br><br>
+                                    <div contenteditable="true">
+                                        Write basic information about your career and the skills you want to communicate to the interviewer. 
+                                        Keep it brief. 
+                                        Remember not to repeat information in any other section of this CV. 
+                                    </div>
+
+
+
+                                    </div>
+
                     </section>
-            </div>
+                </div>
         </body>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script>
-        <script src="html2pdf.bundle.min.js"></script>
-        <script></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.2/html2pdf.bundle.min.js" integrity="sha512-MpDFIChbcXl2QgipQrt1VcPHMldRILetapBl5MPCA9Y8r7qvlwx1/Mc9hNTzY+kS5kX6PdoDq41ws1HiVNLdZA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+        <script src="script.js"></script>
     </html>

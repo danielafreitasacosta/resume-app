@@ -1,3 +1,80 @@
-.nav div {
-    color: blue;
+@import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Barlow:wght@500&display=swap');
+
+* {
+    margin: 0%;
+    padding: 0%;
+    font-weight: 500;
+    font-size: 14px;
 }
+
+body{
+    background: linear-gradient(135deg, #E3E3E3 0%, #9a9a9a 100%);
+    display: grid;
+    place-items: center;
+    font-weight: 450;
+    opacity: 1;
+}
+
+.none
+{
+    display: none;
+}
+
+.resume {
+    margin-top: 20px;
+    width: 800px; 
+    box-shadow: rgba(17, 17, 26, 0.1) 0px 4px 16px, rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px; 
+}
+
+#print {
+    background-color: #fff;
+    padding: 30px 50px;
+    height: 1120px;
+}
+
+.head {
+    display: grid;
+    grid-template-columns: 3fr 1.5fr;
+}
+
+.head .main .name {
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+}
+
+.head .main span:nth-child(2) {
+    color: rgb(100, 100, 100);
+    font-size: 55px;
+    font-family: 'Raleway', sans-serif;
+    margin-left: 5px;
+}
+
+.head .main .post {
+    font-family: 'Barlow', sans-serif;
+}
+
+.head .contacts {
+    text-align: right;
+    padding-top: 7px;
+}
+
+.head .contacts .content {
+    font-weight: 500;
+    padding-right: 5px;
+}
+
+.head .contacts .symbol {
+    margin-right: 5px;
+    font-size: 15px;
+    width: 17px;
+    height: 17px;
+}
+
+.line {
+    height: 0.5px;
+    background-color: rgb(87, 87, 87);
+    margin: 25px 0;
+    margin-bottom: 50px;
+}
+

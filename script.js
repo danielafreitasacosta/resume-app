@@ -1,6 +1,6 @@
 // EJEMPLO
 
-const { html2pdf } = require("html2pdf.js");
+const { html2pdf }   = require("html2pdf.js")
 
 const h1Element = document.getElementById('message');
 const button = document.getElementById('changeMessageButton');
