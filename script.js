@@ -35,6 +35,12 @@ function printpdf() {
 
     html2pdf(content, {
         html2canvas: {scale: 1, logging:true, dpi: 500}
-    });
-    
+    });   
+
+}
+
+function addedu() {
+    const head = document.createElement('div'); 
+    document.getElementById("education").appendChild(head); 
+    head.innerHTML = ('<div class="edublock"><span><input type="checkbox" class="input-checkbox"></span><span class="education-head" contenteditable="true"> Institute Name</span> - <span contenteditable="true"> Passing Year</span></div></div>'); 
 }
